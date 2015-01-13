@@ -13,6 +13,7 @@ namespace Activator.Actives.Items
         internal virtual string Name { get; set; }
         internal virtual List<Utility.Map.MapType> Maps { get; set; }
         internal virtual float Range { get; set; }
+        internal virtual ScalingType Scaling { get; set; }
         internal virtual ItemType Type { get; set; }
 
         internal bool IsActive
@@ -22,11 +23,14 @@ namespace Activator.Actives.Items
 
         internal MenuItem MenuItem { get; private set; }
 
-        internal Item CreateMenuItem(Menu parent) //Will add custom menus for items if needed later
+        internal Item CreateMenuItem(Menu parent) //will add a delegate later that allows to extend the menu if needed
         {
             MenuItem =
-                parent.SubMenu(Type == ItemType.Offensive ? "Offensive" : "Defensive")
-                    .AddItem(new MenuItem(Name, "Use " + Name).SetValue(true));
+                parent.SubMenu(Type == ItemType.Defensive ? "Defensive" : "Offensive")
+                    .SubMenu(Scaling == ScalingType.Ad ? "AD" : "AP")
+                    .SubMenu(Name)
+                    .AddItem(new MenuItem("Enabled", "Enabled").SetValue(true));
+
             return this;
         }
 
@@ -36,6 +40,12 @@ namespace Activator.Actives.Items
         {
             Defensive,
             Offensive
+        }
+
+        internal enum ScalingType
+        {
+            Ad,
+            Ap
         }
     }
 }

@@ -27,11 +27,14 @@ namespace Activator
                 //Load the item manager
                 ItemManager.Load();
 
+                //Will be removed later, gotta change the ts first
+                TargetSelector.AddToMenu(Config.SubMenu("Target selector"));
+
                 //Add the menu as main menu
                 Config.AddToMainMenu();
 
                 //Print our hello
-                Game.PrintChat("Activator loaded!");
+                Game.PrintChat("Activator# loaded!");
             }
             catch (Exception e)
             {
