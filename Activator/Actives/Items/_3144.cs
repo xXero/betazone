@@ -7,11 +7,11 @@ using LeagueSharp.Common;
 
 namespace Activator.Actives.Items
 {
-    internal class _3153 : Item
+    internal class _3144 : Item
     {
         internal override int Id
         {
-            get { return 3153; }
+            get { return 3144; }
         }
 
         internal override List<Utility.Map.MapType> Maps
@@ -21,7 +21,7 @@ namespace Activator.Actives.Items
 
         internal override string Name
         {
-            get { return "Blade of the Ruined King"; }
+            get { return "Bilgewater Cutlass"; }
         }
 
         internal override float Range
@@ -43,9 +43,7 @@ namespace Activator.Actives.Items
         {
             var target = TargetSelector.GetTarget(Range, TargetSelector.DamageType.Physical);
 
-            if (target.IsValidTarget(Range) &&
-                Activator.Player.Health + Activator.Player.GetItemDamage(target, Damage.DamageItems.Botrk) <
-                Activator.Player.MaxHealth)
+            if (target.IsValidTarget(Range))
             {
                 Cast(target);
             }

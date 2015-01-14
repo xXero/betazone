@@ -1,8 +1,8 @@
 ﻿#region
 
 using System.Collections.Generic;
-using LeagueSharp.Common;
 using LeagueSharp;
+using LeagueSharp.Common;
 
 #endregion
 
@@ -35,10 +35,9 @@ namespace Activator.Actives.Items
             return this;
         }
 
-        internal void UseItem(Obj_AI_Hero target)
+        internal void Cast(Obj_AI_Hero target = null)
         {
-            // Just to make life a tad bit easier
-            LeagueSharp.Common.Items.UseItem(Id, target);
+            LeagueSharp.Common.Items.UseItem(Id, target ?? Activator.Player);
         }
 
         internal virtual void Use() {}

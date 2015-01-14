@@ -26,7 +26,7 @@ namespace Activator.Actives.Items
 
         internal override float Range
         {
-            get { return 750; }
+            get { return 750f; }
         }
 
         internal override ScalingType Scaling
@@ -46,7 +46,7 @@ namespace Activator.Actives.Items
             //TODO: Add logic to this :<
             if (target.IsValidTarget(Range))
             {
-                UseItem(target);
+                Cast(target);
             }
         }
     }
