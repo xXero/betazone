@@ -16,7 +16,16 @@ namespace Activator.Actives.Items
 
         internal override List<Utility.Map.MapType> Maps
         {
-            get { return new List<Utility.Map.MapType> { Utility.Map.MapType.SummonersRift }; }
+            get
+            {
+                return new List<Utility.Map.MapType>
+                {
+                    Utility.Map.MapType.CrystalScar,
+                    Utility.Map.MapType.HowlingAbyss,
+                    Utility.Map.MapType.SummonersRift,
+                    Utility.Map.MapType.TwistedTreeline
+                };
+            }
         }
 
         internal override string Name
