@@ -15,6 +15,7 @@ namespace Activator.Actives.Items
         internal virtual List<Utility.Map.MapType> Maps { get; set; }
         internal virtual float Range { get; set; }
         internal virtual ScalingType Scaling { get; set; }
+        internal virtual PredictionInput SpellData { get; set; }
         internal virtual ItemType Type { get; set; }
 
         internal bool IsActive
@@ -35,9 +36,30 @@ namespace Activator.Actives.Items
             return this;
         }
 
-        internal void Cast(Obj_AI_Hero target = null)
+        internal void Cast(Obj_AI_Hero target = null, bool skillshot = false)
         {
-            LeagueSharp.Common.Items.UseItem(Id, target ?? Activator.Player);
+            if (target.IsValidTarget() && skillshot)
+            {
+                var prediction =
+                    Prediction.GetPrediction(
+                        new PredictionInput
+                        {
+                            Aoe = SpellData.Aoe,
+                            Collision = SpellData.Collision,
+                            Delay = SpellData.Delay,
+                            Radius = SpellData.Radius,
+                            Range = SpellData.Range,
+                            Speed = SpellData.Speed,
+                            Type = SpellData.Type,
+                            Unit = target
+                        });
+
+                LeagueSharp.Common.Items.UseItem(Id, prediction.CastPosition);
+            }
+            else
+            {
+                LeagueSharp.Common.Items.UseItem(Id, target ?? Activator.Player);
+            }
         }
 
         internal virtual void Use() {}
