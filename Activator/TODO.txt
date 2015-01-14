@@ -1,8 +1,10 @@
 http://leagueoflegends.wikia.com/wiki/Active_ability_items
+http://gameinfo.euw.leagueoflegends.com/en/game-info/items/
 
 Banner of Command
 Blackfire Torch (will be removed)
 DFG (will be removed)
 Face of the Mountain
+Grez's Spectral Lantern
 
-Anything under that
+Anything under Hextech Gunblade
