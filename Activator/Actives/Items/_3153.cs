@@ -47,7 +47,7 @@ namespace Activator.Actives.Items
                 Activator.Player.Health + Activator.Player.GetItemDamage(target, Damage.DamageItems.Botrk) <
                 Activator.Player.MaxHealth)
             {
-                LeagueSharp.Common.Items.UseItem(Id, target);
+                UseItem(target);
             }
         }
     }

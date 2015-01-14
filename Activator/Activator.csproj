@@ -60,6 +60,7 @@
     <Compile Include="Actives\Items\Item.cs" />
     <Compile Include="Actives\Items\_3153.cs" />
     <Compile Include="Activator.cs" />
+    <Compile Include="Actives\Items\_3128.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

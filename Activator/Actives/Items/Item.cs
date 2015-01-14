@@ -2,6 +2,7 @@
 
 using System.Collections.Generic;
 using LeagueSharp.Common;
+using LeagueSharp;
 
 #endregion
 
@@ -32,6 +33,12 @@ namespace Activator.Actives.Items
                     .AddItem(new MenuItem("Enabled", "Enabled").SetValue(true));
 
             return this;
+        }
+
+        internal void UseItem(Obj_AI_Hero target)
+        {
+            // Just to make life a tad bit easier
+            LeagueSharp.Common.Items.UseItem(Id, target);
         }
 
         internal virtual void Use() {}
