@@ -24,14 +24,15 @@ namespace Activator.Actives.Items
         }
 
         internal MenuItem MenuItem { get; private set; }
+        internal Menu SubMenu { get; set; }
+        internal virtual void Construct() {}
 
-        internal Item CreateMenuItem(Menu parent) //will add a delegate later that allows to extend the menu if needed
+        internal Item CreateMenuItem(Menu parent)
         {
-            MenuItem =
-                parent.SubMenu(Type == ItemType.Defensive ? "Defensive" : "Offensive")
-                    .SubMenu(Scaling == ScalingType.Ad ? "AD" : "AP")
-                    .SubMenu(Name)
-                    .AddItem(new MenuItem("Enabled", "Enabled").SetValue(true));
+            SubMenu = parent.SubMenu(Type.ToString()).SubMenu(Scaling.ToString().ToUpper()).SubMenu(Name);
+            MenuItem = SubMenu.AddItem(new MenuItem("Enabled", "Enabled").SetValue(true));
+
+            Construct();
 
             return this;
         }
