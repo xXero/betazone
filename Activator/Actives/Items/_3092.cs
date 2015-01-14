@@ -53,7 +53,7 @@ namespace Activator.Actives.Items
 
         internal override float Range
         {
-            get { return 850f; }
+            get { return 875f; }
         }
 
         internal override ScalingType Scaling
