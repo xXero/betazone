@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Actives\ItemManager.cs" />
+    <Compile Include="Actives\Items\_3060.cs" />
     <Compile Include="Actives\Items\_3092.cs" />
     <Compile Include="Actives\Items\Item.cs" />
     <Compile Include="Actives\Items\_3144.cs" />
