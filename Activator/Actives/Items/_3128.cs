@@ -21,7 +21,7 @@ namespace Activator.Actives.Items
 
         internal override List<Utility.Map.MapType> Maps
         {
-            get { return new List<Utility.Map.MapType> { Utility.Map.MapType.SummonersRift }; }
+            get { return new List<Utility.Map.MapType> {Utility.Map.MapType.SummonersRift}; }
         }
 
         internal override float Range

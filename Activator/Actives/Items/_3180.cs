@@ -16,7 +16,7 @@ namespace Activator.Actives.Items
 
         internal override List<Utility.Map.MapType> Maps
         {
-            get { return new List<Utility.Map.MapType> { Utility.Map.MapType.CrystalScar }; }
+            get { return new List<Utility.Map.MapType> {Utility.Map.MapType.CrystalScar}; }
         }
 
         internal override string Name

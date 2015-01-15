@@ -5,6 +5,6 @@ Banner of Command
 Blackfire Torch (will be removed)
 DFG (will be removed)
 Face of the Mountain
-Grez's Spectral Lantern
+Grez's Spectral Lantern -- DONE
 
 Anything under Hextech Gunblade
