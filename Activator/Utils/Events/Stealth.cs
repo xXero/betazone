@@ -27,7 +27,7 @@ namespace Activator.Utils.Events
                 return;
             }
 
-            if (!StealthSpells.Any(x => x.Equals(args.SData.Name)))
+            if (!StealthSpells.Any(name => name.Equals(args.SData.Name)))
             {
                 return;
             }
