@@ -19,7 +19,7 @@ namespace Activator.Actives.Events
             Obj_AI_Base.OnProcessSpellCast += ObjAiBaseOnOnProcessSpellCast;
         }
 
-        public static event OnStealthDelegate OnSealth;
+        public static event OnStealthDelegate OnStealth;
 
         private static void ObjAiBaseOnOnProcessSpellCast(Obj_AI_Base sender, GameObjectProcessSpellCastEventArgs args)
         {
@@ -36,9 +36,9 @@ namespace Activator.Actives.Events
             }
 
             // Fire the event
-            if (OnSealth != null)
+            if (OnStealth != null)
             {
-                OnSealth(sender as Obj_AI_Hero);
+                OnStealth(sender as Obj_AI_Hero);
             }
         }
     }
