@@ -29,23 +29,16 @@ namespace Activator.Actives.Events
                 return;
             }
 
-            // See is sender is a hero
-            var hero = sender as Obj_AI_Hero;
-            if (hero == null)
-            {
-                return;
-            }
-
             // Check is spell is listed in the array above
             if (!StealthSpells.Any(x => x.Equals(args.SData.Name)))
             {
                 return;
             }
 
-            // Fire the event, is valid
+            // Fire the event
             if (OnSealth != null)
             {
-                OnSealth(hero);
+                OnSealth(sender as Obj_AI_Hero);
             }
         }
     }
