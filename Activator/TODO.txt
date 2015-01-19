@@ -4,5 +4,15 @@ http://gameinfo.euw.leagueoflegends.com/en/game-info/items/
 Blackfire Torch (will be removed)
 DFG (will be removed)
 Face of the Mountain
+Twin Shadows
+Talisman
+Seraphs embrace
+Ravenous Hydra
+Raduins Omen
+QSS
+Ohmwrecker
+Odyns Veil
+Mikael's Crubicle
+Mercurial Scimitar
 
 Anything under Hextech Gunblade
