@@ -38,7 +38,7 @@ namespace Activator.Actives.Items
             return this;
         }
 
-        internal void Cast(Obj_AI_Hero target = null, bool skillshot = false)
+        internal void Cast(Obj_AI_Base target = null, bool skillshot = false)
         {
             if (target.IsValidTarget() && skillshot)
             {

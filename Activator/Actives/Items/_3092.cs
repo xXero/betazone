@@ -34,7 +34,6 @@ namespace Activator.Actives.Items
         }
 
         internal override PredictionInput SpellData
-
         {
             get
             {

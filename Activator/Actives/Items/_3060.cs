@@ -1,8 +1,6 @@
 ﻿#region
 
 using System.Collections.Generic;
-using System.Linq;
-using LeagueSharp;
 using LeagueSharp.Common;
 
 #endregion
@@ -51,15 +49,19 @@ namespace Activator.Actives.Items
         internal override void Use()
         {
             var nearbyTarget = TargetSelector.GetTarget(Range, TargetSelector.DamageType.True);
+
             if (!nearbyTarget.IsValidTarget())
             {
                 return;
             }
-            var minionList = MinionManager.GetMinions(Range, MinionTypes.All, MinionTeam.Ally);
-            var bestMinion = minionList.MaxOrDefault(minion => !minion.BaseSkinName.Contains("Super"));
+
+            var bestMinion =
+                MinionManager.GetMinions(Range, MinionTypes.All, MinionTeam.Ally)
+                    .MaxOrDefault(minion => !minion.BaseSkinName.ToLower().Contains("super"));
+
             if (bestMinion != null)
             {
-                LeagueSharp.Common.Items.UseItem(Id, bestMinion);
+                Cast(bestMinion);
             }
         }
     }
