@@ -1,8 +1,7 @@
 ﻿#region
 
 using System.Collections.Generic;
-using System.Linq;
-using LeagueSharp;
+using Activator.Utils.Events;
 using LeagueSharp.Common;
 
 #endregion
@@ -50,25 +49,10 @@ namespace Activator.Actives.Items
 
         internal override void Use()
         {
-            // Get the nearest valid target enemy
-            var nearestEnemy = TargetSelector.GetTarget(Range, TargetSelector.DamageType.True);
-
-            if (nearestEnemy == null)
+            Stealth.OnStealth += sender =>
             {
-                return;
-            }
-
-            // Get best bush nearest to the enemy
-            var bestBush =
-                ObjectManager.Get<GrassObject>()
-                    .Where(x => Activator.Player.Distance(x.Position) < Range)
-                    .OrderBy(x => nearestEnemy.Distance(x.Position))
-                    .FirstOrDefault();
-
-            if (bestBush != null)
-            {
-                LeagueSharp.Common.Items.UseItem(Id, bestBush.Position);
-            }
+                Cast(sender.ServerPosition);
+            };
         }
     }
 }

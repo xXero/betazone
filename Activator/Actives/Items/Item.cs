@@ -3,6 +3,7 @@
 using System.Collections.Generic;
 using LeagueSharp;
 using LeagueSharp.Common;
+using SharpDX;
 
 #endregion
 
@@ -61,6 +62,11 @@ namespace Activator.Actives.Items
             {
                 LeagueSharp.Common.Items.UseItem(Id, target ?? Activator.Player);
             }
+        }
+
+        internal void Cast(Vector3 position)
+        {
+            LeagueSharp.Common.Items.UseItem(Id, position);
         }
 
         internal virtual void Use() {}
