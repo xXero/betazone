@@ -32,7 +32,6 @@ namespace Activator.Actives.Items
         {
             get { return "Randuin's Omen"; }
         }
-
         internal override float Range
         {
             get { return 450f; }
@@ -48,9 +47,13 @@ namespace Activator.Actives.Items
             get { return ItemType.Defensive; }
         }
 
+        internal override void Construct()
+        {
+            SubMenu.AddItem(new MenuItem("minEnemiesAround", "Min. enemies around").SetValue(new Slider(2, 1, 5)));
+        }
         internal override void Use()
-        { 
-            if (Activator.Player.CountEnemiesInRange(Range) >= 2)
+        {
+            if (Activator.Player.CountEnemiesInRange(Range) >= SubMenu.Item("minEnemiesAround").GetValue<Slider>().Value)
             {
                 Cast();
             }
