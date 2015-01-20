@@ -49,7 +49,7 @@ namespace Activator.Actives.Items
 
         internal override void Use()
         {
-            Stealth.OnStealth += sender => { Cast(sender.ServerPosition); };
+            Stealth.OnStealth += sender => Cast(sender.ServerPosition);
         }
     }
 }
