@@ -1,19 +1,22 @@
 http://leagueoflegends.wikia.com/wiki/Active_ability_items
 http://gameinfo.euw.leagueoflegends.com/en/game-info/items/
 
-Blackfire Torch (will be removed)
-DFG (will be removed)
-Face of the Mountain
-Twin Shadows
-Talisman
-Seraphs embrace
-Ravenous Hydra - Done
-Tiamat - Done
-Raduins Omen - Done
-QSS
-Ohmwrecker
-Odyns Veil
-Mikael's Crubicle
-Mercurial Scimitar
+Simple ones: 
+Odin's veil,
+Talisman of ascension,
+Twin shadows,
+Righteous glory
+
+AntiStealth:
+Hextech sweeper,
+Lightbringer,
+
+Shields:
+Solari,
+Scimitar,
+Crucible,
+Seraph,
+Face of the mountain,
+Zhonya
 
 Anything under Hextech Gunblade
