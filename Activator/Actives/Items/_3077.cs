@@ -32,6 +32,7 @@ namespace Activator.Actives.Items
         {
             get { return "Tiamat"; }
         }
+
         internal override float Range
         {
             get { return 400f; }

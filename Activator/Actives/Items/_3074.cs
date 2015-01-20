@@ -32,6 +32,7 @@ namespace Activator.Actives.Items
         {
             get { return "Ravenous Hydra"; }
         }
+
         internal override float Range
         {
             get { return 385f; }
