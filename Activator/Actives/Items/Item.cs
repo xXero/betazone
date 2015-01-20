@@ -25,10 +25,7 @@ namespace Activator.Actives.Items
 
         internal MenuItem MenuItem { get; private set; }
         internal Menu SubMenu { get; set; }
-
-        internal virtual void Construct()
-        {
-        }
+        internal virtual void Construct() {}
 
         internal Item CreateMenuItem(Menu parent)
         {
@@ -66,9 +63,7 @@ namespace Activator.Actives.Items
             }
         }
 
-        internal virtual void Use()
-        {
-        }
+        internal virtual void Use() {}
 
         internal enum ItemType
         {

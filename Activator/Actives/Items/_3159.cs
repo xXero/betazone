@@ -18,7 +18,14 @@ namespace Activator.Actives.Items
 
         internal override List<Utility.Map.MapType> Maps
         {
-            get { return new List<Utility.Map.MapType> {Utility.Map.MapType.TwistedTreeline}; }
+            get
+            {
+                return new List<Utility.Map.MapType>
+                {
+                    Utility.Map.MapType.CrystalScar,
+                    Utility.Map.MapType.TwistedTreeline
+                };
+            }
         }
 
         internal override string Name
