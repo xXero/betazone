@@ -34,7 +34,7 @@ namespace Activator.Actives.Items
 
         internal override float Range
         {
-            get { return 800; }
+            get { return 800f; }
         }
 
         internal override ScalingType Scaling
