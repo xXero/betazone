@@ -65,7 +65,6 @@
     <Compile Include="Actives\Items\_3146.cs" />
     <Compile Include="Actives\Items\_3153.cs" />
     <Compile Include="Activator.cs" />
-    <Compile Include="Actives\Items\_3128.cs" />
     <Compile Include="Actives\Items\_3159.cs" />
     <Compile Include="Actives\Items\_3180.cs" />
     <Compile Include="Actives\Items\_3184.cs" />

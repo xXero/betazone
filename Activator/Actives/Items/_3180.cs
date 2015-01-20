@@ -46,7 +46,7 @@ namespace Activator.Actives.Items
 
         internal override void Use()
         {
-            if (Activator.Player.CountEnemysInRange(Range) >= SubMenu.Item("minEnemiesAround").GetValue<Slider>().Value)
+            if (Activator.Player.CountEnemiesInRange(Range) >= SubMenu.Item("minEnemiesAround").GetValue<Slider>().Value)
             {
                 Cast();
             }
