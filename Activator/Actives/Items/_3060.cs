@@ -33,7 +33,7 @@ namespace Activator.Actives.Items
 
         internal override float Range
         {
-            get { return 700f; }
+            get { return 1000f; }
         }
 
         internal override ScalingType Scaling
@@ -43,7 +43,7 @@ namespace Activator.Actives.Items
 
         internal override ItemType Type
         {
-            get { return ItemType.Offensive; }
+            get { return ItemType.Defensive; }
         }
 
         internal override void Use()
