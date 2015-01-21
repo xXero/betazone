@@ -4,7 +4,6 @@ http://gameinfo.euw.leagueoflegends.com/en/game-info/items/
 Simple ones: 
 Odin's veil,
 Twin shadows,
-Righteous glory
 
 AntiStealth:
 Hextech sweeper,
