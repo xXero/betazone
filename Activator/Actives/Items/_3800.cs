@@ -55,7 +55,7 @@ namespace Activator.Actives.Items
         }
         internal override void Use()
         {
-            var MaxUnits = 3000*(Activator.Player.MoveSpeed*1.6f);
+            var MaxUnits = 3000f*(Activator.Player.MoveSpeed*1.6f);
             var target = TargetSelector.GetTarget(MaxUnits, TargetSelector.DamageType.True);
             if (target.IsValidTarget() && Activator.Player.CountEnemiesInRange(Range) >= SubMenu.Item("minAlliesAround").GetValue<Slider>().Value)
             {
