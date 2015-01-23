@@ -56,6 +56,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Actives\Items\_3140.cs" />
     <Compile Include="Actives\Items\_3800.cs" />
     <Compile Include="Actives\Items\_3069.cs" />
     <Compile Include="Actives\Items\_3077.cs" />
