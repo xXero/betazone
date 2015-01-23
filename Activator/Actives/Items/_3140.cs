@@ -54,11 +54,12 @@ namespace Activator.Actives.Items
 
         internal override void Construct()
         {
+            SubMenu.AddItem(new MenuItem("minBuffs", "Min. buffs to cleanse").SetValue(new Slider(2, 1, 5)));
+
             for (int i = 0; i < buffs.Count(); i++)
             {
                 SubMenu.AddItem(new MenuItem(buffs[i].ToString(), buffs[i].ToString()).SetValue(true));
             }
-            SubMenu.AddItem(new MenuItem("minBuffs", "Min. buffs to cleanse").SetValue(new Slider(2, 1, 5)));
         }
 
         internal override void Use()
