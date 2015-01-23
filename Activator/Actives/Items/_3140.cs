@@ -63,7 +63,7 @@ namespace Activator.Actives.Items
 
         internal override void Use()
         {
-            var buffNumbers = buffs.Count(Buff => Activator.Player.HasBuffOfType(Buff));
+            var buffNumbers = buffs.Count(Buff => Activator.Player.HasBuffOfType(Buff) && SubMenu.Item(Buff.ToString()).GetValue<bool>());
 
             if (buffNumbers >= SubMenu.Item("minBuffs").GetValue<Slider>().Value)
             {
